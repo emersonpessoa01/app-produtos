@@ -8,7 +8,7 @@ const api = axios.create({
 });
 
 const App = () => {
-  const [allProducts, setAllProducts] = useState([]);
+  const [promotions, setPromotions] = useState([]);
 
   useEffect(() => {
     const getApi = async () => {
@@ -16,7 +16,7 @@ const App = () => {
       const json = await res.data;
 
       console.log(json);
-      setAllProducts(json);
+      setPromotions(json);
     };
     getApi();
   }, []);
@@ -29,34 +29,34 @@ const App = () => {
         margin: "30px auto",
       }}
     >
-      {allProducts.map((product) => {
+      {promotions.map((promotion) => {
         return (
-          <div className="promotion-card" key={product._id}>
+          <div className="promotion-card" key={promotion._id}>
             <img
-              src={product.imageUrl}
+              src={promotion.imageUrl}
               className="promotion-card__image"
-              alt={product.imageUrl}
+              alt={promotion.imageUrl}
             />
             <div className="promotion-card__info">
-              <h1 className="promotion-card__title">{product.title}</h1>
+              <h1 className="promotion-card__title">{promotion.title}</h1>
               <span className="promotion-card__price">
-                {product.price.toLocaleString("pt-br", {
+                {promotion.price.toLocaleString("pt-br", {
                   style: "currency",
                   currency: "BRL",
                 })}
               </span>
               <footer className="promotion-card__footer">
-                {product.comments.length > 0 && (
+                {promotion.comments.length > 0 && (
                   <div className="promotion-card__comment">
-                    "{product.comments[0].comment}"
+                    "{promotion.comments[0].comment}"
                   </div>
                 )}
                 <div className="promotion-card__comments-count">
-                  {product.comments.length}{" "}
-                  {product.comments.length > 1 ? "Comentários" : "Comentário"}
+                  {promotion.comments.length}{" "}
+                  {promotion.comments.length > 1 ? "Comentários" : "Comentário"}
                 </div>
                 <a
-                  href={product.url}
+                  href={promotion.url}
                   target="_blank"
                   className="promotion-card__link"
                   rel="noopener noreferrer"
