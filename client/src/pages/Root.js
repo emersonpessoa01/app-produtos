@@ -13,7 +13,7 @@ const Root=()=>{
       <Switch>
         <Route path="/edit/:id" exact component={PagesPromotionEdit} />
         <Route path="/search" exact component={PagesPromotionSearch} />
-        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
       </Switch>
     </Router>
   )

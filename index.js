@@ -68,5 +68,5 @@ if (process.env.NODE_ENV === "production") {
  */
 const APP_PORT = process.env.PORT || 8080;
 app.listen(APP_PORT, () => {
-  console.log(`Servidor iniciado em http://localhost:3003`);
+  console.log(`Servidor iniciado em http://localhost:3002`);
 });
