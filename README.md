@@ -1,4 +1,4 @@
-### Preview: [app](https://login-teste2.herokuapp.com/admin/login)
+### Preview: [app](https://app-produtos-delivery.herokuapp.com/home)
 ### Descrição:
 - Backend vinculado ao Frontend(client)<br>
 - "npm run dev" para iniciar tanto api quanto o front<br>
