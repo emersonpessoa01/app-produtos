@@ -1,3 +1,7 @@
+.promotion-search{
+  margin-bottom: 20px;
+}
+
 .promotion-search__header{
   display: flex;
   justify-content: space-between;
@@ -17,3 +21,4 @@
   font-size: 16px;
 
 }
+

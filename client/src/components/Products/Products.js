@@ -1,5 +1,4 @@
 import React from "react";
-// import "../Products/Product";
 import "../../components/Promotion/Card/Card.css"
 
 function Products({ products }) {
