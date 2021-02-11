@@ -21,16 +21,20 @@ const App = () => {
       const res = await api.get("http://localhost:3002/api/products");
       const json = await res.data;
 
-      let allProducts = json.map(({ title, price, imageUrl, url, comments }) => {
-        return {
-          title,
-          filterTitle: title.toLowerCase(),
-          price,
-          imageUrl,
-          url,
-          comments,
-        };
-      });
+      let allProducts = json
+        .map(({ title, price, imageUrl, url, comments }) => {
+          return {
+            title,
+            filterTitle: title.toLowerCase(),
+            price,
+            imageUrl,
+            url,
+            comments,
+          };
+        })
+        .sort((a, b) => {
+          return a.title.localeCompare(b.title);
+        });
       console.log(allProducts);
 
       const filteredPrice = allProducts.reduce((accumulator, current) => {
@@ -56,6 +60,7 @@ const App = () => {
       return accumulator + current.price;
     }, 0);
 
+
     console.log(filteredProducts);
     setFilteredProducts(filteredProducts);
     setFilteredPrice(filteredPrice);
@@ -75,7 +80,6 @@ const App = () => {
         totalPrice={filteredPrice}
         onChangeFilter={handleChangeFilter}
       />
-
       <Products products={filteredProducts} />
     </div>
   );
