@@ -40,13 +40,19 @@ function PromotionForm() {
         margin: "30px auto",
       }}
     >
-      <h1>Promo Show</h1>
+      <h1 className="promotion-form__title">Promo Show</h1>
       <h2>Nova Promoção</h2>
 
       <form onSubmit={onSubmit}>
         <div className="promotion-form__group">
           <label htmlFor="title">Título:</label>
-          <input id="title" name="title" type="text" onChange={onChange} />
+          <input
+            autoFocus
+            id="title"
+            name="title"
+            type="text"
+            onChange={onChange}
+          />
 
           <label htmlFor="url">Link:</label>
           <input id="url" name="url" type="text" onChange={onChange} />
@@ -70,7 +76,9 @@ function PromotionForm() {
           />
         </div>
         <div>
-          <button type="submit">Salvar</button>
+          <button className="button" type="submit">
+            Salvar
+          </button>
         </div>
       </form>
     </div>
