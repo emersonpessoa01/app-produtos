@@ -25,7 +25,6 @@ const App = () => {
         .map(({ title, price, imageUrl, url, comments }) => {
           return {
             title,
-            filterTitle: title.toLowerCase(),
             price,
             imageUrl,
             url,
@@ -53,7 +52,7 @@ const App = () => {
     setFilter(newText);
     const filterLowerCase = newText.toLowerCase();
     const filteredProducts = allProducts.filter((product) => {
-      return product.filterTitle.includes(filterLowerCase);
+      return product.title.toLowerCase().includes(filterLowerCase);
     });
 
     const filteredPrice = filteredProducts.reduce((accumulator, current) => {
