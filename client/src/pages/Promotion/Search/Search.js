@@ -1,8 +1,9 @@
 import React from "react";
+import PromotionForm from "components/Promotion/Form/Form";
 
 const PagesPromotionSearch = () => {
   return(
-    <div>SEARCH</div>
+    <div><PromotionForm /></div>
   )
 };
 

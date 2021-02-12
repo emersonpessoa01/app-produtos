@@ -7,7 +7,7 @@ export default class Product extends Component {
     const { imageUrl, title, price, comments, url } = this.props.product;
 
     return (
-      <div className="promotion-card">
+      <div className="promotion-card" >
         <img src={imageUrl} className="promotion-card__image" alt={imageUrl} />
         <div className="promotion-card__info">
           <h1 className="promotion-card__title">{title}</h1>

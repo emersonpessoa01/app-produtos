@@ -1,0 +1,41 @@
+.promotion-form__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #888;
+}
+.promotion-form__group{
+  display: flex;
+  flex-direction: column;
+  
+}
+.promotion-form__group label{
+  margin-bottom: 5px;
+  font-style: 14px;
+  color: #555555;
+  font-weight: 600;
+
+}
+.promotion-form__group input{
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: #fff;
+  height: 36px;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.button{
+  background-color: rgb(19, 41, 139);
+  color:#fff;
+  width: 25%;
+  height: 35px;
+  border-radius: 8px;
+}
+.button:hover{
+  background-color:rgb(46, 175, 20);
+  color:#fff;
+  cursor: pointer;
+}

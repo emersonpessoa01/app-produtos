@@ -6,7 +6,9 @@ function Products({ products }) {
   return (
     <div>
       {products.map((product) => {
-        return <Product key={product.imageUrl} product={product} />
+        return (
+          <Product key={product.imageUrl} product={product} />
+        );
       })}
     </div>
   );
