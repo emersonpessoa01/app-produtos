@@ -29,7 +29,11 @@ function PromotionForm() {
     axios
       .post("http://localhost:3002/api/products", values)
       .then((response) => {
-        history.push("/home");
+        if (values) {
+          history.push("/home");
+        }else{
+          alert("Insira dados nos campos")
+        }
       });
   };
 
