@@ -22,14 +22,14 @@ const App = () => {
       const json = await res.data;
 
       let allProducts = json
-        .map(({ title, price, imageUrl, url, comments,_id }) => {
+        .map(({ title, price, imageUrl, url, comments, id }) => {
           return {
             title,
             price,
             imageUrl,
             url,
             comments,
-            _id,
+            id,
           };
         })
         .sort((a, b) => {
@@ -60,7 +60,6 @@ const App = () => {
       return accumulator + current.price;
     }, 0);
 
-
     console.log(filteredProducts);
     setFilteredProducts(filteredProducts);
     setFilteredPrice(filteredPrice);
@@ -80,7 +79,11 @@ const App = () => {
         totalPrice={filteredPrice}
         onChangeFilter={handleChangeFilter}
       />
-      <Products products={filteredProducts} />
+      {filteredProducts.length !== 0 ? (
+        <Products products={filteredProducts} />
+      ) : (
+        <div>Carregando...</div>
+      )}
     </div>
   );
 };
