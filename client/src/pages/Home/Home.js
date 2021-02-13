@@ -22,14 +22,14 @@ const App = () => {
       const json = await res.data;
 
       let allProducts = json
-        .map(({ title, price, imageUrl, url, comments, id }) => {
+        .map(({ title, price, imageUrl, url, comments, _id }) => {
           return {
             title,
             price,
             imageUrl,
             url,
             comments,
-            id,
+            _id,
           };
         })
         .sort((a, b) => {

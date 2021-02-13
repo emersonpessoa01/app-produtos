@@ -3,7 +3,9 @@ import PromotionForm from "components/Promotion/Form/Form";
 
 const PagesPromotionSearch = () => {
   return(
-    <div><PromotionForm /></div>
+    <div>
+      <PromotionForm />
+      </div>
   )
 };
 
