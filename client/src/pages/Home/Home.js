@@ -7,7 +7,7 @@ import Header from "components/Header/Header";
 import Products from "components/Products/Products";
 
 const api = axios.create({
-  baseURL: "http",
+  baseURL: "https://app-produtos-delivery.herokuapp.com",
 });
 
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
 
   useEffect(() => {
     const getApi = async () => {
-      const res = await api.get("http://localhost:3002/api/products");
+      const res = await api.get("/api/products");
       const json = await res.data;
 
       let allProducts = json

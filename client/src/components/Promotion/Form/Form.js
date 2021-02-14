@@ -22,7 +22,7 @@ function PromotionForm({ id }) {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:3002/api/products.details/${id}`)
+        .get(`https://app-produtos-delivery.herokuapp.com/api/products.details/${id}`)
         .then((response) => {
           console.log(response.data);
           setValues(response.data);
@@ -40,8 +40,8 @@ function PromotionForm({ id }) {
     evt.preventDefault();
     const method = id ? "put" : "post";
     const url = id
-      ? `http://localhost:3002/api/products/${id}`
-      : "http://localhost:3002/api/products";
+      ? `https://app-produtos-delivery.herokuapp.com/api/products/${id}`
+      : "https://app-produtos-delivery.herokuapp.com/api/products";
 
     axios[method](url, values).then((response) => {
       history.push("/home");
