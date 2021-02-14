@@ -1,15 +1,19 @@
 import React from "react";
-import "../../components/Promotion/Card/Card.css"
+import "../../components/Promotion/Card/Card.css";
 import { Link } from "react-router-dom";
 // import Product from "./Product"
 
 function Products({ products }) {
   return (
-    <div>
+    <div >
       {products.map((product) => {
         return (
           <div className="promotion-card" key={product.title}>
-            <img src={product.imageUrl} className="promotion-card__image" alt={product.imageUrl} />
+            <img
+              src={product.imageUrl}
+              className="promotion-card__image"
+              alt={product.imageUrl}
+            />
             <div className="promotion-card__info">
               <h1 className="promotion-card__title">{product.title}</h1>
               <span className="promotion-card__price">
@@ -28,15 +32,22 @@ function Products({ products }) {
                   {product.comments.length}{" "}
                   {product.comments.length > 1 ? "Comentários" : "Comentário"}
                 </div>
-                <a
-                  href={product.url}
-                  target="_blank"
-                  className="promotion-card__link"
-                  rel="noopener noreferrer"
-                >
-                  IR PARA O SITE
-                </a>
-                <Link to={`/edit/${product._id}`}>Editar</Link>
+                <div className="promotion-card__divImage">
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    className="promotion-card__link"
+                    rel="noopener noreferrer"
+                  >
+                    Visitar site
+                  </a>
+                  <Link
+                    className="promotion-card__link"
+                    to={`/edit/${product._id}`}
+                  >
+                    Atualizar
+                  </Link>
+                </div>
               </footer>
             </div>
           </div>

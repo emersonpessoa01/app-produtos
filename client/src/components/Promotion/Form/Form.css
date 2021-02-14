@@ -1,4 +1,4 @@
-.promotion-form__title{
+.promotion-form__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,19 +6,21 @@
   text-transform: uppercase;
   color: #888;
 }
-.promotion-form__group{
+.promotion-form__title2 {
+  color: #888;
+}
+
+.promotion-form__group {
   display: flex;
   flex-direction: column;
-  
 }
-.promotion-form__group label{
+.promotion-form__group label {
   margin-bottom: 5px;
   font-style: 14px;
   color: #555555;
   font-weight: 600;
-
 }
-.promotion-form__group input{
+.promotion-form__group input {
   border: 1px solid #aaaaaa;
   border-radius: 8px;
   background-color: #fff;
@@ -27,16 +29,16 @@
   margin-bottom: 15px;
 }
 
-.button{
-  background-color: rgb(19, 41, 139);
-  color:#fff;
+.button {
+  background-color: rgb(0, 140, 221);
+  color: #fff;
   width: 25%;
   height: 35px;
   border-radius: 8px;
 }
-.button:hover{
-  background-color:rgb(46, 175, 20);
-  color:#fff;
+.button:hover {
+  background-color: rgb(46, 175, 20);
+  color: #fff;
   cursor: pointer;
-  transition: background-color .5s
+  transition: background-color 0.5s;
 }

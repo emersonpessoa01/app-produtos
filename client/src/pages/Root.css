@@ -1,0 +1,20 @@
+body{
+  background-color:#ececec;
+  margin:0;
+}
+nav{
+  min-height: 50px;
+  background-color: rgb(0, 140, 221);
+  padding: 0 20%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+a:link 
+{ 
+ text-decoration:none; 
+} 

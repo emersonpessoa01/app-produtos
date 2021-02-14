@@ -9,6 +9,7 @@ const initialValue = [
     imageUrl: "",
     price: "",
     url: "",
+    amount: "",
   },
 ];
 
@@ -54,62 +55,71 @@ function PromotionForm({ id }) {
   return (
     <div
       style={{
-        maxWidth: 800,
+        maxWidth: 600,
         margin: "30px auto",
       }}
     >
       <h1 className="promotion-form__title">Promo Show</h1>
-      <h2>Nova Promoção</h2>
       {!values ? (
-        <div>Nenhum resultado encontrado...</div>
+        <div>Carregando...</div>
       ) : (
-        <form onSubmit={onSubmit}>
-          <div className="promotion-form__group">
-            <label htmlFor="title">Título:</label>
-            <input
-              autoFocus
-              id="title"
-              name="title"
-              type="text"
-              onChange={onChange}
-              value={values.title}
-            />
+        <div>
+          <form onSubmit={onSubmit}>
+            <div className="promotion-form__group">
+              <label htmlFor="title">Título:</label>
+              <input
+                autoFocus
+                id="title"
+                name="title"
+                type="text"
+                onChange={onChange}
+                value={values.title}
+              />
 
-            <label htmlFor="url">Link:</label>
-            <input
-              id="url"
-              name="url"
-              type="text"
-              onChange={onChange}
-              value={values.url}
-            />
+              <label htmlFor="url">Link:</label>
+              <input
+                id="url"
+                name="url"
+                type="text"
+                onChange={onChange}
+                value={values.url}
+              />
 
-            <label htmlFor="imageUrl">Imagem(url):</label>
-            <input
-              id="imageUrl"
-              name="imageUrl"
-              type="text"
-              onChange={onChange}
-              value={values.imageUrl}
-            />
+              <label htmlFor="imageUrl">Imagem(url):</label>
+              <input
+                id="imageUrl"
+                name="imageUrl"
+                type="text"
+                onChange={onChange}
+                value={values.imageUrl}
+              />
 
-            <label htmlFor="price">Preço:</label>
-            <input
-              id="price"
-              name="price"
-              type="number"
-              min="0.0"
-              step="0.01"
-              onChange={onChange}
-              value={values.price}
-            />
-          </div>
-          <div>
-            <button className="button" type="submit">
-              Salvar
-            </button>
-          </div>
-        </form>
+              <label htmlFor="price">Preço:</label>
+              <input
+                id="price"
+                name="price"
+                type="number"
+                min="0.0"
+                step="0.01"
+                onChange={onChange}
+                value={values.price}
+              />
+              <label htmlFor="amount">Quantidade:</label>
+              <input
+                id="amount"
+                name="amount"
+                type="amount"
+                onChange={onChange}
+                value={values.amount}
+              />
+            </div>
+            <div>
+              <button className="button" type="submit">
+                Salvar
+              </button>
+            </div>
+          </form>
+        </div>
       )}
     </div>
   );

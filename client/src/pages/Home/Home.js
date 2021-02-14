@@ -18,7 +18,7 @@ const App = () => {
   // const [load,loadInfo] = useApi({
   //   url:"http://localhost:3002/api/products",
 
-  //   onCmpleted:(response)=>{
+  //   onCompleted:(response)=>{
   //     setAllProducts(response.data)
   //   }
   // });
@@ -77,7 +77,7 @@ const App = () => {
     <div
       className="App"
       style={{
-        maxWidth: 800,
+        maxWidth: 600,
         margin: "30px auto",
       }}
     >
@@ -87,9 +87,7 @@ const App = () => {
         totalPrice={filteredPrice}
         onChangeFilter={handleChangeFilter}
       />
-      {filteredProducts.length === 0 ? (
-        <div>Nenhum item encontrado...</div>
-      ) : filteredProducts.length === null ? (
+      {filteredProducts.length === null ? (
         <div>Carregando...</div>
       ) : (
         <Products products={filteredProducts} />
