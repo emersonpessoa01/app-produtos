@@ -61,7 +61,7 @@ function PromotionForm({ id }) {
       <h1 className="promotion-form__title">Promo Show</h1>
       <h2>Nova Promoção</h2>
       {!values ? (
-        <div>Carregando...</div>
+        <div>Nenhum resultado encontrado...</div>
       ) : (
         <form onSubmit={onSubmit}>
           <div className="promotion-form__group">

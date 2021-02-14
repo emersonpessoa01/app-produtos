@@ -15,6 +15,13 @@ const App = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filteredPrice, setFilteredPrice] = useState(0);
   const [filter, setFilter] = useState("");
+  // const [load,loadInfo] = useApi({
+  //   url:"http://localhost:3002/api/products",
+
+  //   onCmpleted:(response)=>{
+  //     setAllProducts(response.data)
+  //   }
+  // });
 
   useEffect(() => {
     const getApi = async () => {
@@ -46,6 +53,7 @@ const App = () => {
       setFilteredPrice(filteredPrice);
     };
     getApi();
+    // load();
   }, []);
 
   const handleChangeFilter = (evt) => {
@@ -79,10 +87,12 @@ const App = () => {
         totalPrice={filteredPrice}
         onChangeFilter={handleChangeFilter}
       />
-      {filteredProducts.length !== 0 ? (
-        <Products products={filteredProducts} />
-      ) : (
+      {filteredProducts.length === 0 ? (
+        <div>Nenhum item encontrado...</div>
+      ) : filteredProducts.length === null ? (
         <div>Carregando...</div>
+      ) : (
+        <Products products={filteredProducts} />
       )}
     </div>
   );
