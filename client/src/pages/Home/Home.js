@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../../App.css";
 import "../../components/Promotion/Card/Card.css";
-import axios from "axios";
 import "../../components/Promotion/Search/Search.css";
 import Header from "components/Header/Header";
 import Products from "components/Products/Products";
-
-const api = axios.create({
-  baseURL: "https://app-produtos-delivery.herokuapp.com",
-});
+import api from "../../Api/Api"
 
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);

@@ -8,17 +8,32 @@
   align-items: center;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #888;
+  color: #fff;
+  margin:0 20px;
+  background: url("../../img/fast-food.jpg") center center/560px no-repeat;
+  max-height:100px;
+  border-radius: 8px;
+  font-size: 15px;
 
 }
 .promotion-search__input{
   height: 42px;
   border: 1px solid #ccc;
   border-radius:10px;
-  width: 100%;
+  width: 94%;
+  margin-bottom:20px;
+  padding: 0 20px;
+  font-size: 16px;
+  margin:0 20px
+
+}
+.promotion-search__items{
+  height: 42px;
   margin-bottom:20px;
   padding: 0 10px;
   font-size: 16px;
+  margin:0 10px;
+
 
 }
 

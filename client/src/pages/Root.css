@@ -10,7 +10,7 @@ nav{
   top: 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content:space-around;
   align-items: center;
 
 }
