@@ -6,21 +6,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: #fff;
   margin:0 20px;
-  background: url("../../img/fast-food.jpg") center center/560px no-repeat;
+  background: url("../../img/fastfood.jpg") center center/560px no-repeat;
   max-height:100px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   font-size: 15px;
+  height: 100px;
 
+}
+
+.promotion-search__h3{
+  margin: 0 50px;
 }
 .promotion-search__input{
   height: 42px;
   border: 1px solid #ccc;
-  border-radius:10px;
-  width: 94%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 93.4%;
   margin-bottom:20px;
   padding: 0 20px;
   font-size: 16px;

@@ -1,0 +1,27 @@
+#footer {
+  background-color: #262d92;
+  /* background-color: rgb(0, 140, 221); */
+  color: lightgray;
+  padding: 10px 11%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.social-media {
+  display: flex;
+  flex-flow: row nowrap;
+  
+}
+
+.social-icon {
+  max-width: 30px;
+  max-height: 30px;
+  padding: 1px;
+}
+.copyrights{
+  font-size:15px;
+}

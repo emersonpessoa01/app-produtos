@@ -4,7 +4,12 @@ import "../../components/Promotion/Card/Card.css";
 import "../../components/Promotion/Search/Search.css";
 import Header from "components/Header/Header";
 import Products from "components/Products/Products";
-import api from "../../Api/Api"
+import api from "../../Api/Api";
+import Github from "../../components/img/github.png";
+import Linkedin from "../../components/img/linkedin.png";
+import Facebook from "../../components/img/facebook.png";
+import "../../components/Footer/Footer.css";
+
 
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -88,7 +93,36 @@ const App = () => {
       ) : (
         <Products products={filteredProducts} />
       )}
+      <footer id="footer">
+        <div className="social-media">
+          <a
+            href="https://github.com/emersonpessoa01"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Github} alt="github" className="social-icon" />{" "}
+          </a>
+          <a
+            href="https://www.linkedin.com/feed/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Linkedin} alt="linkedin" className="social-icon" />{" "}
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100005211906450"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Facebook} alt="facebook" className="social-icon" />{" "}
+          </a>
+        </div>
+        <div className="copyrights">
+          <p>EPessoa 2021 @ Todos os direitos reservados</p>
+        </div>
+      </footer>
     </div>
+    
   );
 };
 

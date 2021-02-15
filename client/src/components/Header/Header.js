@@ -5,7 +5,7 @@ function Header({ filter, onChangeFilter, productCount, totalPrice }) {
   return (
     <div className="promotion-search">
       <header className="promotion-search__header">
-        <h3>Promo Show</h3>
+        <h3 className="promotion-search__h3">Promo Show</h3>
         <Link to="/create">Nova Promoção</Link>
       </header>
       <input
