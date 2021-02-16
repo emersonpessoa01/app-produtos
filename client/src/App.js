@@ -1,6 +1,5 @@
 import Root from "pages/Root";
 import React from "react";
-// import Root from "./pages/Root";
 
 function App() {
   return <Root />;
