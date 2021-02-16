@@ -34,6 +34,9 @@
   border-radius: 8px;
   border: 1px solid #fff;
   padding: 8px;
+  transition: border .9s;
+  -webkit-text-stroke-width: .1px; /* largura da borda */
+  -webkit-text-stroke-color: yellow; /* cor da borda */
 }
 .promotion-search__input {
   height: 42px;

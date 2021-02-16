@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Products({ products }) {
   return (
-    <div className="promotion-card__main" >
+    <div className="promotion-card__main">
       {products.map((product) => {
         return (
           <div className="promotion-card" key={product.title}>
@@ -31,23 +31,23 @@ function Products({ products }) {
                   {product.comments.length}{" "}
                   {product.comments.length > 1 ? "Comentários" : "Comentário"}
                 </div>
-                <div className="promotion-card__divImage">
-                  <a
-                    href={product.url}
-                    target="_blank"
-                    className="promotion-card__link"
-                    rel="noopener noreferrer"
-                  >
-                    Visitar site
-                  </a>
-                  <Link
-                    className="promotion-card__link"
-                    to={`/edit/${product._id}`}
-                  >
-                    Atualizar
-                  </Link>
-                </div>
               </footer>
+            </div>
+            <div className="promotion-card__divImage">
+              <a
+                href={product.url}
+                target="_blank"
+                className="promotion-card__link"
+                rel="noopener noreferrer"
+              >
+                Visitar site
+              </a>
+              <Link
+                className="promotion-card__link"
+                to={`/edit/${product._id}`}
+              >
+                Atualizar
+              </Link>
             </div>
           </div>
         );
