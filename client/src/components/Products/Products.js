@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Products({ products }) {
   return (
-    <div >
+    <div className="promotion-card__main" >
       {products.map((product) => {
         return (
           <div className="promotion-card" key={product.title}>

@@ -4,6 +4,7 @@ import PagesPromotionEdit from "./Promotion/Edit/Edit";
 import PagesPromotionSearch from "./Promotion/Search/Search";
 import Home from "./Home/Home";
 import "./Root.css"
+import Footer from "components/Footer/Footer";
 
 const Root = () => {
   return (
@@ -20,6 +21,7 @@ const Root = () => {
           <Route path="/create" exact component={PagesPromotionSearch} />
           <Route path="/home" exact component={Home} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

@@ -1,47 +1,55 @@
-.promotion-search{
+.promotion-search {
   margin-bottom: 20px;
+  margin: 0 20px;
+  width: 96.5%;
 }
 
-.promotion-search__header{
+.promotion-search__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #fff;
-  margin:0 20px;
+  margin: 0 10px;
   background: url("../../img/fastfood.jpg") center center/560px no-repeat;
-  max-height:100px;
+  max-height: 100px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   font-size: 15px;
   height: 100px;
-
 }
 
-.promotion-search__h3{
-  margin: 0 50px;
+.promotion-search__h3 {
+  margin: 0 30px;
+  -webkit-text-stroke-width: .1px; /* largura da borda */
+  -webkit-text-stroke-color: #fff; /* cor da borda */
+  color:rgba(255,255,0, 0.2); /*0.2 para 20%*/
 }
-.promotion-search__input{
+
+.promotion-search__link {
+  margin-left: 30px;
+}
+.promotion-search__link:hover {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 8px;
+}
+.promotion-search__input {
   height: 42px;
   border: 1px solid #ccc;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  width: 93.4%;
-  margin-bottom:20px;
+  margin: 20px 20px;
   padding: 0 20px;
   font-size: 16px;
-  margin:0 20px
-
+  margin: 0 10px;
+  width: 96.5%;
 }
-.promotion-search__items{
+.promotion-search__items {
   height: 42px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   padding: 0 10px;
   font-size: 16px;
-  margin:0 10px;
-
-
+  margin: 0 10px;
 }
-
-
