@@ -5,6 +5,8 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #888;
+  margin-right: 20px;
+  margin: 0 40px;
 }
 .promotion-form__title2 {
   color: #888;
@@ -13,12 +15,15 @@
 .promotion-form__group {
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 .promotion-form__group label {
   margin-bottom: 5px;
+  margin-top: 5px;
   font-style: 14px;
   color: #555555;
   font-weight: 600;
+  margin:8px 20px;
 }
 .promotion-form__group input {
   border: 1px solid #aaaaaa;
@@ -27,7 +32,12 @@
   height: 36px;
   padding: 0 10px;
   margin-bottom: 15px;
+  width: 78%;
+  margin: 0 20px;
+
+
 }
+
 
 .button {
   background-color: rgb(0, 140, 221);
@@ -35,6 +45,7 @@
   width: 25%;
   height: 35px;
   border-radius: 8px;
+  margin: 0 40px;
 }
 .button:hover {
   background-color: rgb(46, 175, 20);

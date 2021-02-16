@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../Promotion/Form/Form.css";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
+import api from "../../../Api/Api"
 
 const initialValue = [
   {
@@ -17,12 +17,12 @@ function PromotionForm({ id }) {
   const [values, setValues] = useState(id ? null : initialValue);
   const history = useHistory();
   // console.log(values);
-  console.log(id);
+  // console.log(id);
 
   useEffect(() => {
     if (id) {
-      axios
-        .get(`https://app-produtos-delivery.herokuapp.com/api/products.details/${id}`)
+      api
+        .get(`/api/products.details/${id}`)
         .then((response) => {
           console.log(response.data);
           setValues(response.data);
@@ -40,10 +40,10 @@ function PromotionForm({ id }) {
     evt.preventDefault();
     const method = id ? "put" : "post";
     const url = id
-      ? `https://app-produtos-delivery.herokuapp.com/api/products/${id}`
-      : "https://app-produtos-delivery.herokuapp.com/api/products";
+      ? `/api/products/${id}`
+      : "/api/products";
 
-    axios[method](url, values).then((response) => {
+    api[method](url, values).then((response) => {
       history.push("/home");
     });
   };
@@ -69,6 +69,7 @@ function PromotionForm({ id }) {
               <label htmlFor="title">Título:</label>
               <input
                 autoFocus
+                className="promotion-form__input"
                 id="title"
                 name="title"
                 type="text"

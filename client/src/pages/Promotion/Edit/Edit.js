@@ -10,7 +10,7 @@ const PagesPromotionEdit = () => {
   return (
     <div
       style={{
-        maxWidth: 800,
+        maxWidth: 600,
         margin: "30px auto",
       }}
     >
