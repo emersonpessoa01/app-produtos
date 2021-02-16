@@ -5,6 +5,7 @@ import "../../components/Promotion/Search/Search.css";
 import Header from "components/Header/Header";
 import Products from "components/Products/Products";
 import api from "../../Api/Api";
+import "../../components/Footer/Footer.css";
 
 
 const App = () => {

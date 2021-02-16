@@ -1,7 +1,7 @@
 .promotion-search {
   margin-bottom: 20px;
-  margin: 0 20px;
-  width: 96.5%;
+  /* margin: 0 10px; */
+  width: 97%;
 }
 
 .promotion-search__header {
@@ -11,13 +11,15 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #fff;
-  margin: 0 10px;
+  margin: 0 15px;
   background: url("../../img/fastfood.jpg") center center/560px no-repeat;
   max-height: 100px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   font-size: 15px;
   height: 100px;
+  width: 97%;
+
 }
 
 .promotion-search__h3 {
@@ -28,7 +30,7 @@
 }
 
 .promotion-search__link {
-  margin-left: 30px;
+  margin-right: 30px;
 }
 .promotion-search__link:hover {
   border-radius: 8px;
@@ -46,8 +48,8 @@
   margin: 20px 20px;
   padding: 0 20px;
   font-size: 16px;
-  margin: 0 10px;
-  width: 96.5%;
+  margin: 0 15px;
+  width: 97%;
 }
 .promotion-search__items {
   height: 42px;
