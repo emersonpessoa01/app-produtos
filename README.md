@@ -38,6 +38,7 @@
  * npm install @material-ui/core<br>
  * npm install ou yarn add @material-ui/icons<br>
  * yarn add axios<br>
+ * cd client && yarn add react-loading<br>
 
 
 
