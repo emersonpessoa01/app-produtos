@@ -6,6 +6,7 @@ import Header from "components/Header/Header";
 import Products from "components/Products/Products";
 import api from "../../Api/Api";
 import "../../components/Footer/Footer.css";
+import Preloader1 from "components/Preloader/Preloader1";
 
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -14,31 +15,33 @@ const App = () => {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    const getApi = async () => {
-      const res = await api.get("/api/products");
-      const json = await res.data;
+    setTimeout(() => {
+      const getApi = async () => {
+        const res = await api.get("/api/products");
+        const json = await res.data;
 
-      let allProducts = json
-        .map(({ title, price, imageUrl, url, comments, _id }) => {
-          return {
-            title,
-            price,
-            imageUrl,
-            url,
-            comments,
-            _id,
-          };
-        })
-        .sort((a, b) => {
-          return a.title.localeCompare(b.title);
-        });
-      console.log(allProducts);
+        let allProducts = json
+          .map(({ title, price, imageUrl, url, comments, _id }) => {
+            return {
+              title,
+              price,
+              imageUrl,
+              url,
+              comments,
+              _id,
+            };
+          })
+          .sort((a, b) => {
+            return a.title.localeCompare(b.title);
+          });
+        console.log(allProducts);
 
-      setAllProducts(allProducts);
-      setFilteredProducts(Object.assign([], allProducts));
-      setDone(true);
-    };
-    getApi();
+        setAllProducts(allProducts);
+        setFilteredProducts(Object.assign([], allProducts));
+        setDone(true);
+      };
+      getApi();
+    }, 2000);
   }, []);
 
   const handleChangeFilter = (evt) => {
@@ -63,7 +66,7 @@ const App = () => {
     >
       <Header filter={filter} onChangeFilter={handleChangeFilter} />
       {!done ? (
-        <div>Carregando...</div>
+        <Preloader1 />
       ) : filteredProducts.length === 0 ? (
         <div>Nenhum item encontrado</div>
       ) : (
