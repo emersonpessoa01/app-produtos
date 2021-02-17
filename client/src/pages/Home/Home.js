@@ -5,12 +5,13 @@ import "../../components/Promotion/Search/Search.css";
 import Header from "components/Header/Header";
 import Products from "components/Products/Products";
 import api from "../../Api/Api";
-
+import "../../components/Footer/Footer.css";
 
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [filter, setFilter] = useState("");
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     const getApi = async () => {
@@ -35,6 +36,7 @@ const App = () => {
 
       setAllProducts(allProducts);
       setFilteredProducts(Object.assign([], allProducts));
+      setDone(true);
     };
     getApi();
   }, []);
@@ -59,17 +61,15 @@ const App = () => {
         margin: "30px auto",
       }}
     >
-      <Header
-        filter={filter}
-        onChangeFilter={handleChangeFilter}
-      />
-      {filteredProducts.length === null ? (
+      <Header filter={filter} onChangeFilter={handleChangeFilter} />
+      {!done ? (
         <div>Carregando...</div>
+      ) : filteredProducts.length === 0 ? (
+        <div>Nenhum item encontrado</div>
       ) : (
         <Products products={filteredProducts} />
       )}
     </div>
-    
   );
 };
 

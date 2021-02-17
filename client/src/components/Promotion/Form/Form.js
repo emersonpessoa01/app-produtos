@@ -16,8 +16,6 @@ const initialValue = [
 function PromotionForm({ id }) {
   const [values, setValues] = useState(id ? null : initialValue);
   const history = useHistory();
-  // console.log(values);
-  // console.log(id);
 
   useEffect(() => {
     if (id) {
@@ -45,12 +43,8 @@ function PromotionForm({ id }) {
 
     api[method](url, values).then((response) => {
       history.push("/home");
-    });
+    }); 
   };
-
-  // if (!values) {
-  //   return <div>Carregando...</div>;
-  // }
 
   return (
     <div
