@@ -1,4 +1,4 @@
-### Preview: [app](https://app-produtos-delivery.herokuapp.com/home)
+### Preview: [app](https://app-delivery-products.herokuapp.com/home)
 ### Descrição:
 - Backend vinculado ao Frontend(client)<br>
 - "npm run dev" para iniciar tanto api quanto o front<br>
@@ -38,6 +38,7 @@
  * npm install @material-ui/core<br>
  * npm install ou yarn add @material-ui/icons<br>
  * yarn add axios<br>
+ * yarn add react-loading<br>
 
 
 
