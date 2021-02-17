@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../../Promotion/Form/Form.css";
 import { useHistory } from "react-router-dom";
-import api from "../../../Api/Api"
+import api from "../../../Api/Api";
+import Preloader1 from "components/Preloader/Preloader1";
 
 const initialValue = [
   {
@@ -18,14 +19,14 @@ function PromotionForm({ id }) {
   const history = useHistory();
 
   useEffect(() => {
-    if (id) {
-      api
-        .get(`/api/products.details/${id}`)
-        .then((response) => {
+    setTimeout(() => {
+      if (id) {
+        api.get(`/api/products.details/${id}`).then((response) => {
           console.log(response.data);
           setValues(response.data);
         });
-    }
+      }
+    }, 200);
   }, [id]);
 
   const onChange = (evt) => {
@@ -37,13 +38,11 @@ function PromotionForm({ id }) {
   const onSubmit = (evt) => {
     evt.preventDefault();
     const method = id ? "put" : "post";
-    const url = id
-      ? `/api/products/${id}`
-      : "/api/products";
+    const url = id ? `/api/products/${id}` : "/api/products";
 
     api[method](url, values).then((response) => {
       history.push("/home");
-    }); 
+    });
   };
 
   return (
@@ -55,7 +54,7 @@ function PromotionForm({ id }) {
     >
       <h1 className="promotion-form__title">Promo Show</h1>
       {!values ? (
-        <div>Carregando...</div>
+        <Preloader1 />
       ) : (
         <div>
           <form onSubmit={onSubmit}>
