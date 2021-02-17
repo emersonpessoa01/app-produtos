@@ -7,6 +7,7 @@ import Products from "components/Products/Products";
 import api from "../../Api/Api";
 import "../../components/Footer/Footer.css";
 import Preloader1 from "components/Preloader/Preloader1";
+import Items from "components/Item/Items";
 
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -68,7 +69,7 @@ const App = () => {
       {!done ? (
         <Preloader1 />
       ) : filteredProducts.length === 0 ? (
-        <div>Nenhum item encontrado</div>
+        <Items />
       ) : (
         <Products products={filteredProducts} />
       )}
