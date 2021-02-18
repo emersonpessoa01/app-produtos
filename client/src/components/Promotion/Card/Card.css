@@ -71,7 +71,7 @@
   font-size:0.8em;
 }
 .promotion-card__link:hover{
-  background-color: #3498db;
+  background-color: #3498db; /*#2eaf14 rgba(223, 238, 17, 0.877) */
   color: #fff;
   cursor: pointer;
   transition: background-color 1.25s;

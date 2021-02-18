@@ -7,8 +7,8 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  position: sticky;
+
 }
 
 .social-media {

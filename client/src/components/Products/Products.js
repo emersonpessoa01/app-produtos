@@ -46,7 +46,7 @@ function Products({ products }) {
                 className="promotion-card__link"
                 to={`/edit/${product._id}`}
               >
-                Atualizar
+                <i className="fas fa-pen"></i>
               </Link>
             </div>
           </div>
