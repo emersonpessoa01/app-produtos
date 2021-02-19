@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../components/Promotion/Card/Card.css";
 import { Link } from "react-router-dom";
+import UIModal from "../../components/UI/Modal/Modal";
 
 function Products({ products }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  console.log(isModalOpen);
+
   return (
     <div className="promotion-card__main">
       {products.map((product) => {
@@ -27,10 +32,13 @@ function Products({ products }) {
                     "{product.comments[0].comment}"
                   </div>
                 )}
-                <div className="promotion-card__comments-count">
+                <button
+                  className="promotion-card__comments-count"
+                  onClick={() => setIsModalOpen(product._id)}
+                >
                   {product.comments.length}{" "}
                   {product.comments.length > 1 ? "Comentários" : "Comentário"}
-                </div>
+                </button>
               </footer>
             </div>
             <div className="promotion-card__divImage">
@@ -52,6 +60,11 @@ function Products({ products }) {
           </div>
         );
       })}
+      {isModalOpen ? (
+        <UIModal>
+          <h1>Comentários</h1>
+        </UIModal>
+      ) : null}
     </div>
   );
 }
