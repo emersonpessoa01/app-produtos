@@ -1,32 +1,15 @@
 import React from "react";
+import "../Item/Items.css";
 
 function Items() {
   return (
-    <div
-      style={{
-        margin: "110px",
-        marginTop: "100",
-        marginBottom: "100",
-        justifyContent: "center",
-        alignItems: "center",
-        fontFamily: "Righteous",
-      }}
-    >
+    <div className="item-items">
       <div>
-        <h1
-          style={{
-            width: "25px",
-            height: "50px",
-            margin: "80px auto",
-            color: "#fece2f",
-            WebkitTextStrokeColor: "rgba(255,255,0,0.5)",
-            WebkitTextStrokeWidth: "2.5px",
-          }}
-        >
+        <h1 className="item-items__title">
           {" "}
           <i className="fas fa-search fa-2x"></i>
         </h1>
-        <span style={{ color: "blue" }}>Nenhum item encontrado.</span>
+        <span className="item-items__span">Nenhum item encontrado.</span>
       </div>
     </div>
   );
