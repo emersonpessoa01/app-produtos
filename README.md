@@ -1,4 +1,4 @@
-### Preview: [app](https://app-delivery-products.herokuapp.com/home)
+### Preview: [app](https://app-products-emerson.herokuapp.com/home)
 ### Descrição:
 - Backend vinculado ao Frontend(client)<br>
 - "npm run dev" para iniciar tanto api quanto o front<br>
