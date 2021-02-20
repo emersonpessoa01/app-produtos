@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../components/Promotion/Card/Card.css";
 import UIModal from "../../components/UI/Modal/Modal";
 
@@ -49,12 +50,12 @@ function Products({ products }) {
               >
                 Visitar site
               </a>
-              <button
-                className="promotion-card__button"
+              <Link
+                className="promotion-card__Link"
                 to={`/edit/${product._id}`}
               >
                 <i className="fas fa-pen"></i>
-              </button>
+              </Link>
             </div>
           </div>
         );
