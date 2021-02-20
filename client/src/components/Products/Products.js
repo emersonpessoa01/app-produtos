@@ -34,7 +34,7 @@ function Products({ products }) {
                 )}
                 <button
                   className="promotion-card__comments-count"
-                  onClick={() => setIsModalOpen(product._id)}
+                  onClick={() => setIsModalOpen(true)}
                 >
                   {product.comments.length}{" "}
                   {product.comments.length > 1 ? "Comentários" : "Comentário"}
