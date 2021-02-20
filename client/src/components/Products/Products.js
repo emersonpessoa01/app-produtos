@@ -61,7 +61,7 @@ function Products({ products }) {
         );
       })}
       {isModalOpen ? (
-        <UIModal>
+        <UIModal onClose={()=>setIsModalOpen(false)}>
           <h1>Comentários</h1>
         </UIModal>
       ) : null}

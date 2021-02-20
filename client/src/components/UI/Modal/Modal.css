@@ -4,11 +4,15 @@
   max-width: 800px;
   margin:80px auto 0 auto;
   padding: 15px;
+  width: 60%;
+  height:60%;
+  border-radius: 8px;
 
 
 }
 
 .ui-modal__overlay{
+  border: solid 1px #888;
   position: fixed;
   top: 0;
   right: 0;
@@ -19,6 +23,9 @@
 .ui-modal__close-button{
   float: right;
   background: unset;
+  /* background: transparent; */
   border: unset;
+  outline: none;
+  cursor: pointer;
   
 }

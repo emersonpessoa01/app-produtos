@@ -17,6 +17,7 @@ function Items() {
           style={{
             width: "25px",
             height: "50px",
+            margin: "80px auto",
             color: "#fece2f",
             WebkitTextStrokeColor: "rgba(255,255,0,0.5)",
             WebkitTextStrokeWidth: "2.5px",
