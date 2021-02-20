@@ -1,8 +1,8 @@
 import React from "react";
-import reactDOM from "react-dom";
+// import reactDOM from "react-dom";
 import "./Modal.css";
 
-const portalRoot = document.getElementById("portal-root");
+// const portalRoot = document.getElementById("portal-root");
 
 function UIModal({id="modal",onClose=()=>{}, children}) {
 
@@ -10,7 +10,8 @@ function UIModal({id="modal",onClose=()=>{}, children}) {
     if(evt.target.id === id) onClose();
   }
 
-  return reactDOM.createPortal(
+  // return reactDOM.createPortal(
+    return(
     <div id="modal" className="ui-modal__overlay" onClick={handleOutSideClick}>
       <div className="ui-modal">
         <button className="ui-modal__close-button" type="button" onClick={onClose}>
@@ -18,8 +19,9 @@ function UIModal({id="modal",onClose=()=>{}, children}) {
         </button>
         <div className="ui-modal__content">{children}</div>
       </div>
-    </div>,
-    portalRoot
+    </div>
+    // ,
+    // portalRoot
   );
 }
 
