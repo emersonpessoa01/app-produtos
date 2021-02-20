@@ -8,7 +8,6 @@
   padding-left: 13px;
   align-items: flex-start;
   margin: 0 4px;
-  
 }
 .promotion-card__main {
   /* display: flex; */
@@ -20,7 +19,6 @@
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  
 }
 .promotion-card__image {
   max-width: 100px;
@@ -28,9 +26,10 @@
   margin: 0 7px;
   border-radius: 50%;
   width: 15%;
-  
-  
+}
 
+.promotion-card__info {
+  flex-grow: 1;
 }
 
 .promotion-card__title {
@@ -41,6 +40,7 @@
 .promotion-card__price {
   font-size: 16px;
   font-weight: 700;
+  max-width: 34px;
   color: #3498db;
 }
 
@@ -52,7 +52,10 @@
 .promotion-card__comment {
   color: #95a5a6;
   font-size: 10px;
-  
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+
 }
 
 .promotion-card__comments-count {
@@ -60,6 +63,10 @@
   margin-left: auto;
   margin-right: 20px;
   color: #3498db;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .promotion-card__link {
@@ -68,16 +75,36 @@
   color: #3498db;
   text-decoration: none;
   padding: 6px 8px;
-  font-size:0.8em;
+  font-size: 0.8em;
+  /* white-space: nowrap; */
 }
-.promotion-card__link:hover{
+
+.promotion-card__link:hover {
   background-color: #3498db; /*#2eaf14 rgba(223, 238, 17, 0.877) */
   color: #fff;
   cursor: pointer;
   transition: background-color 1.25s;
-
 }
-.promotion-card__divImage{
+
+.promotion-card__button {
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  color: #3498db;
+  text-decoration: none;
+  padding: 6px 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.promotion-card__button:hover {
+  background-color: #3498db; /*#2eaf14 rgba(223, 238, 17, 0.877) */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 1.25s;
+}
+
+.promotion-card__divImage {
   display: flex;
   flex-direction: space-between;
   margin-left: 20px;

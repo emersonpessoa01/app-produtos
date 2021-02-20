@@ -4,17 +4,20 @@ import "./Modal.css";
 
 // const portalRoot = document.getElementById("portal-root");
 
-function UIModal({id="modal",onClose=()=>{}, children}) {
-
-  const handleOutSideClick = (evt)=>{
-    if(evt.target.id === id) onClose();
-  }
+function UIModal({ id = "modal", onClose = () => {}, children }) {
+  const handleOutSideClick = (evt) => {
+    if (evt.target.id === id) onClose();
+  };
 
   // return reactDOM.createPortal(
-    return(
+  return (
     <div id="modal" className="ui-modal__overlay" onClick={handleOutSideClick}>
       <div className="ui-modal">
-        <button className="ui-modal__close-button" type="button" onClick={onClose}>
+        <button
+          className="ui-modal__close-button"
+          type="button"
+          onClick={onClose}
+        >
           X
         </button>
         <div className="ui-modal__content">{children}</div>
