@@ -34,7 +34,8 @@ function Products({ products }) {
                 )}
                 <button
                   className="promotion-card__comments-count"
-                  onClick={() => setIsModalOpen(product._id)}
+                  value={product.comments}
+                  onClick={() => setIsModalOpen(product.comments[0].comment)}
                 >
                   {product.comments.length}{" "}
                   {product.comments.length > 1 ? "Comentários" : "Comentário"}
@@ -62,9 +63,20 @@ function Products({ products }) {
       })}
       {isModalOpen ? (
         <UIModal onClose={() => setIsModalOpen(false)}>
-          <h1>Comentários</h1>
+          <h1>
+            {isModalOpen ? (
+              isModalOpen
+            ) : isModalOpen.length === 0 ? (
+              <div>
+                <h2>Nenhum comentário.</h2>
+              </div>
+            ) : (
+              isModalOpen
+            )}
+          </h1>
         </UIModal>
       ) : null}
+      {/* {isModalOpen ? <UIModal onClose={() => setIsModalOpen(false)} /> : null} */}
     </div>
   );
 }

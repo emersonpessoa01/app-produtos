@@ -12,6 +12,7 @@ import Items from "components/Item/Items";
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  // const [filteredComments, setFilteredComments] = useState([]);
   const [filter, setFilter] = useState("");
   const [done, setDone] = useState(false);
 

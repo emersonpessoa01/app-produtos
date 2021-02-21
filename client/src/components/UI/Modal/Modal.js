@@ -3,7 +3,8 @@ import React from "react";
 import "./Modal.css";
 
 // const portalRoot = document.getElementById("portal-root");
-
+// 
+// function UIModal({ id = "modal", onClose = () => {}}) {
 function UIModal({ id = "modal", onClose = () => {}, children }) {
   const handleOutSideClick = (evt) => {
     if (evt.target.id === id) onClose();
@@ -21,6 +22,7 @@ function UIModal({ id = "modal", onClose = () => {}, children }) {
           X
         </button>
         <div className="ui-modal__content">{children}</div>
+        {/* <div className="ui-modal__content"><h1>Comentários</h1></div> */}
       </div>
     </div>
     // ,
