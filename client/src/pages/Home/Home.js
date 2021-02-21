@@ -6,15 +6,16 @@ import Header from "components/Header/Header";
 import Products from "components/Products/Products";
 import api from "../../Api/Api";
 import "../../components/Footer/Footer.css";
-import Preloader1 from "components/Preloader/Preloader1";
 import Items from "components/Item/Items";
+import Preloader2 from "components/Preloader/Preloader2";
+import Preloader3 from "components/Preloader/Preloader3"
 
 const App = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  // const [filteredComments, setFilteredComments] = useState([]);
   const [filter, setFilter] = useState("");
   const [done, setDone] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,6 +42,10 @@ const App = () => {
         setAllProducts(allProducts);
         setFilteredProducts(Object.assign([], allProducts));
         setDone(true);
+
+        setTimeout(()=>{
+          setCompleted(true)
+        },1000)
       };
       getApi();
     }, 2000);
@@ -67,13 +72,16 @@ const App = () => {
       }}
     >
       <Header filter={filter} onChangeFilter={handleChangeFilter} />
-      {!done ? (
-        <Preloader1 />
-      ) : filteredProducts.length === 0 ? (
-        <Items />
-      ) : (
-        <Products products={filteredProducts} />
-      )}
+      {
+      !done ? 
+      <Preloader2 />
+      :!completed ?
+       <Preloader3 />
+      : filteredProducts.length ===0 ?
+      <Items/>
+      :
+      <Products products={filteredProducts} />
+      }
     </div>
   );
 };
